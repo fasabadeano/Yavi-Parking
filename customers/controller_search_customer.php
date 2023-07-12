@@ -31,13 +31,13 @@ $ruc_ci_customer ='';
             <div class="mb-3 row">
                <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control">
+                 <input type="text" class="form-control" id="name_customer<?php echo $id_map;?>">
                </div>
              </div>
              <div class="mb-3 row">
                <label for="staticEmail" class="col-sm-2 col-form-label">RUC/ID</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control">
+                 <input type="text" class="form-control" id="ruc_ci_customer<?php echo $id_map;?>">
                </div>
              </div>
         <?php
@@ -47,13 +47,13 @@ $ruc_ci_customer ='';
         <div class="mb-3 row">
                <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control" value="<?php echo $name_customer; ?>">
+                 <input type="text" class="form-control"  id="name_customer<?php echo $id_map;?>" value="<?php echo $name_customer; ?>">
                </div>
              </div>
              <div class="mb-3 row">
                <label for="staticEmail" class="col-sm-2 col-form-label">RUC/ID</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control" value="<?php echo $ruc_ci_customer; ?>">
+                 <input type="text" class="form-control" id="ruc_ci_customer<?php echo $id_map; ?>" value="<?php echo $ruc_ci_customer; ?>">
                </div>
              </div>
         <?php

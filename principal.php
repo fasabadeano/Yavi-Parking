@@ -114,7 +114,7 @@ include('layout/admin/data_user_sesion.php');
                                                $month = date('m');
                                                $year = date('Y');
                                               ?>
-                                              <input type="date" class="form-control" value="<?php echo $year."-".$month."-".$day; ?>">
+                                              <input type="date" class="form-control" id="fecha_ingreso<?php echo $id_map; ?>" value="<?php echo $year."-".$month."-".$day; ?>">
                                             </div>
                                           </div>
 
@@ -127,14 +127,34 @@ include('layout/admin/data_user_sesion.php');
                                                $hour = date('H');
                                                $minute = date('i');
                                               ?>
-                                              <input type="time" class="form-control" value="<?php echo $hour.":".$minute; ?>">
+                                              <input type="time" class="form-control" id="hora_ingreso<?php echo $id_map; ?>" value="<?php echo $hour.":".$minute; ?>">
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-3 row">
+                                            <label for="staticEmail" class="col-sm-3 col-form-label">Espacio del vehiculo</label>
+                                            <div class="col-sm-9">
+                                          
+                                              <input type="text" class="form-control" id="espacio_vehiculo<?php echo $id_map; ?>" value="<?php echo $nro_space; ?>">
                                             </div>
                                           </div>
                                           
                                           </div>
                                           <div class="modal-footer">
                                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                              <button type="button" class="btn btn-primary">Imprimir Ticket</button>
+                                              <button type="button" class="btn btn-primary" id="btn_register_ticket<?php echo $id_map; ?>" >Imprimir Ticket</button>
+                                              <script>
+                                                $('#btn_register_ticket<?php echo $id_map; ?>').click(function() {
+                                                  var placa = $('#placa_buscar<?php echo $id_map; ?>').val();
+                                                  var nombre_cliente = $('#name_customer<?php echo $id_map;?>').val();
+                                                  var ci = $('#ruc_ci_customer<?php echo $id_map; ?>').val();
+                                                  var fecha_ingreso = $('#fecha_ingreso<?php echo $id_map; ?>').val();
+                                                  var hora_ingreso = $('#hora_ingreso<?php echo $id_map; ?>').val();
+                                                  var espacio_vehiculo = $('#espacio_vehiculo<?php echo $id_map; ?>').val();
+
+
+                                                });
+                                              </script>
                                           </div>
                                       </div>
                                   </div>
